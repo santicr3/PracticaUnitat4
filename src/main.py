@@ -160,9 +160,9 @@ class MainWindow(QMainWindow):
             r.setValue("name", task_name)
             r.setValue("module", task_module)
             if task_finished:
-                r.setValue("finished", 0)
-            else:
                 r.setValue("finished", 1)
+            else:
+                r.setValue("finished", 0)
                 
             self.task_model.insertRecord(-1, r)
         
